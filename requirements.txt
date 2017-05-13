@@ -8,6 +8,7 @@ django-filter==0.11.0
 django-livereload-server==0.2.3
 django-registration-redux==1.5
 djangorestframework==3.6.2
+gunicorn==19.7.1
 Markdown==2.6.8
 olefile==0.44
 packaging==16.8
