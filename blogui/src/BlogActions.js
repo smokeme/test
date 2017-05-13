@@ -3,7 +3,7 @@ import dispatcher from './BlogDispatcher';
 const actions = {
   fetchArticles: () => {
     console.log("fetching ... ");
-    const url = 'http://127.0.0.1:8000/api/articles.json';
+    const url = 'https://evening-meadow-18915.herokuapp.com/api/articles.json';
     fetch(url).then(resp => {
       console.log(resp);
       if (resp.ok) {
@@ -26,7 +26,7 @@ const actions = {
   },
   submitDraft: (draft) => {
     console.log(draft);
-    const url = "http://127.0.0.1:8000/api/articles/new/";
+    const url = "https://evening-meadow-18915.herokuapp.com/api/articles/new/";
     fetch(url, {
       headers: {
         'Accept': 'application/json',
