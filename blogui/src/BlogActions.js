@@ -3,7 +3,7 @@ import dispatcher from './BlogDispatcher';
 const actions = {
   fetchArticles: () => {
     console.log("fetching ... ");
-    const url = 'http://localhost:8000/api/articles.json';
+    const url = 'http://127.0.0.1:8000/api/articles.json';
     fetch(url).then(resp => {
       console.log(resp);
       if (resp.ok) {

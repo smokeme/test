@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import viewsets, mixins
 from rest_framework.response import Response
@@ -6,6 +7,9 @@ from rest_framework.response import Response
 from blogdb.models import Article
 from blogdb.serializers import ArticleSerializer, NewArticleSerializer
 
+def main(request):
+    context = {}
+    return render(request,"index.html",context)
 
 class ArticleViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Article.objects.all()
